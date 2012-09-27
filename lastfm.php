@@ -45,6 +45,7 @@ function formatTime($track_time){
 */    
 function getTracks(){
 	$user = "";
+	
 	$tracks=  simplexml_load_file("http://ws.audioscrobbler.com/1.0/user/".$user."/recenttracks.rss");
 	$songs = $tracks->channel;	
 	

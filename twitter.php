@@ -96,6 +96,7 @@ function getTweets(){
 	$tags = true;
 	$nofollow = true;
 	$target = true;
+	
 	$tweetxml = "http://search.twitter.com/search.atom?q=from:" . $twitterid . "&rpp=" . $numberoftweets . "";
 	$tweets = getLatestTweets($tweetxml, $tags, $nofollow, $target, $widget);
 

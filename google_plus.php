@@ -8,7 +8,9 @@
 */
 function getPhotos(){
 	$userID = "";
-	$feed = simplexml_load_file("https://picasaweb.google.com/data/feed/api/user/".$userID."?kind=photo&max-results=8");
+	$numberOfPhotos = "8";
+	
+	$feed = simplexml_load_file("https://picasaweb.google.com/data/feed/api/user/".$userID."?kind=photo&max-results=".$numberOfPhotos);
 	for ($i = 0; $i < 8; $i++){
 		$element = $feed->entry[$i]->content;	
 		
